@@ -2,8 +2,15 @@ package io.zipcoder.polymorphism;
 
 public class Pet {
     String name;
+    String type;
 
-//Constructor
+
+
+    //Constructors
+    public Pet (String name, String type) {
+        this.name=name;
+        this.type = type;
+    }
     public Pet (String name) {
         this.name=name;
     }
@@ -19,6 +26,15 @@ public class Pet {
     public String getName (){
         return name;
     }
+
+    public void setType(String type){
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
 
     public String speak(){
     return null;
