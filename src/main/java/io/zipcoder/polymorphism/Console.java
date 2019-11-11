@@ -18,24 +18,26 @@ public final class Console {
         this.output = out;
     }
 
-    public void printToString(Integer numberOfPets, ArrayList<Pet> myPets) {
-        String speaks = "";
-        for (int i = 0; i < numberOfPets; i++) {
-            if (myPets.get(i).getType().equals("Dog")) {
-                speaks = "Woof!";
-            } else if (myPets.get(i).getType().equals("Cat")) {
-                speaks = "Meow!";
-            } else {
-                speaks = "Happy Easter!";
-            }
-
-            System.out.println("Your pet: " +  myPets.get(i).getType() + "        Named: " + myPets.get(i).getName() + "          Says: " + speaks);
-
-        }
-
-    }
+//    public void printToString(Integer numberOfPets, ArrayList<Pet> myPets) {
+//        String speaks = "";
+//        for (int i = 0; i < numberOfPets; i++) {
+//            if (myPets.get(i).getType().equals("Dog")) {
+//                speaks = "Woof!";
+//            } else if (myPets.get(i).getType().equals("Cat")) {
+//                speaks = "Meow!";
+//            } else {
+//                speaks = "Happy Easter!";
+//            }
+//
+//            System.out.println("Your pet: " +  myPets.get(i).getType() + "        Named: " + myPets.get(i).getName() + "          Says: " + speaks);
+//
+//        }
+//
+//    }
 
     public void printListFormat (Integer numberOfPets, ArrayList<Pet> myPets){
+        StringBuilder sb = new StringBuilder();
+        String result = "";
         String speaks = "";
         for (int i = 0; i < numberOfPets; i++) {
             if (myPets.get(i).getType().equals("Dog")) {
@@ -45,10 +47,11 @@ public final class Console {
             } else {
                 speaks = "Happy Easter!";
             }
-
-            System.out.println(String.format("%s\t\t%s\t\t%s\n", myPets.get(i).getType(), myPets.get(i).getName(), speaks));
+            result = sb.append(myPets.get(i).getName()).append("            ").append(myPets.get(i).getType()).append("            ").append(speaks).append("\n").toString();
 
         }
+
+        System.out.println(result);
     }
 
 }

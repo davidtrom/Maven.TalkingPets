@@ -40,8 +40,8 @@ public class MainApplication {
 
         //uses the console object to print the results with two different ways - one being a list and the other being
         //a more formatted sentence.
-        console.printToString(numberOfPets, myPets);
-        //console.printListFormat(numberOfPets, myPets);
+        //console.printToString(numberOfPets, myPets);
+        console.printListFormat(numberOfPets, myPets);
 
     }
 }
