@@ -47,7 +47,7 @@ public final class Console {
             } else {
                 speaks = "Happy Easter!";
             }
-            result = sb.append(myPets.get(i).getName()).append("            ").append(myPets.get(i).getType()).append("            ").append(speaks).append("\n").toString();
+            result = sb.append(myPets.get(i).getName()).append("\t\t").append(myPets.get(i).getType()).append("\t\t").append(speaks).append("\n").toString();
 
         }
 
